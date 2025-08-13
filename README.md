@@ -1,1 +1,1 @@
-# notion_project
+# AI inspiration board
