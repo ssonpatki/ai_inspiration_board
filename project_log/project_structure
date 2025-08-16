@@ -1,0 +1,51 @@
+-> Layout of project <-
+
+ai-inspiration-board/
+│
+├── backend/                 # Python backend (Flask)
+│   ├── app.py               # Main Flask app
+│   ├── requirements.txt     # Python dependencies
+│   ├── ai/                  # AI-related code
+│   │   ├── summarizer.py    # Hugging Face summarization logic
+│   │   └── embeddings.py    # Optional semantic search / related content
+│   └── data/                # Optional: store sample notes or reference data
+│       └── notes.json
+│
+├── frontend/                # React + TypeScript frontend
+│   ├── package.json
+│   ├── tsconfig.json
+│   ├── public/              # Static files
+│   │   └── index.html
+│   └── src/
+│       ├── index.tsx        # App entry
+│       ├── App.tsx          # Main component
+│       ├── components/      # Reusable React components
+│       │   ├── Tile.tsx     # Tile/Card component
+│       │   └── Board.tsx    # Draggable/resizable grid layout
+│       ├── api/             # API request functions
+│       │   └── aiApi.ts
+│       └── styles/          # CSS or Tailwind files
+│           └── App.css
+│
+├── assets/                  # Optional: images, icons, fonts
+│
+└── README.md                # Project description, setup instructions
+
+
+-> Folder & File Responsibilities <-
+
+backend/app.py → Flask routes, handle /generate POST requests
+
+backend/ai/summarizer.py → Summarizes text using Hugging Face
+
+backend/ai/embeddings.py → Optional: find related content via embeddings
+
+backend/data/ → Store sample notes, links, or reference datasets
+
+frontend/src/components/Tile.tsx → Each draggable/resizable tile
+
+frontend/src/components/Board.tsx → The interactive board/grid layout
+
+frontend/src/api/aiApi.ts → Handles calls to Flask backend
+
+frontend/src/styles/ → Custom styles (CSS or Tailwind) for UI/UX
