@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Inspiration Board</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Inspiration Board</h1>
+        <!-- Form below sends data to backend (app.py) via POST request -->
+        <form method="post">
+            <!-- input type="text" for user to inputs topic -->
+            <!-- (name="topic" from frontend used for request.form["topic"] in backend logic) -->
+            <input type="text" name="topic" placeholder="Enter a topic" required>
+
+            <!-- send form data to backend -->
+            <button type="submit">Generate</button>
+        </form>
+
+        <!-- {% if output %} = only show following section of html after AI has generated something -->
+        {% if output %}
+            <div class="output">
+                <h2>AI Suggestions:</h2>
+                <!-- Flask injects text response by LLM into {{ output }}-->
+                <p>{{ output }}</p> 
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

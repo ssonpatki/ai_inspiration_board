@@ -1,0 +1,42 @@
+Simple Project
+
+-> STARTING POINT FOR LLM/NLP PROJECT <-
+
+-> Layout of project <-
+
+ai_inspiration_board/
+├── app.py
+├── templates/
+│   └── index.html
+├── static/
+│   └── style.css
+├── requirements.txt
+└── README.md                # Project description, setup instructions
+
+
+-> Folder & File Responsibilities <-
+
+app.py -> Flask backend, AI engine
+
+templates/index.html -> Frontend, user interface
+
+static/styles.css -> Custom styles (CSS or Tailwind) for UI/UX
+
+
+-> LLM/NLP in this Project <-
+
+User Input -> Natural Language Processing (NLP) Model:
+    - User types a topic in the form
+    - Flask sends it as a prompt to the GPT model (distilgpt2)
+
+Prompting the Large Language Model (LLM):
+    - Use line prompt to instruct the LLM
+    - LLM uses language knowledge to generate relevant text/response
+
+Text Generation:
+    - Generative Pre-trained Transformer (GPT) model generates human-like text: a summary and suggested tasks
+    - NLP in action, using a large pretrained model to understand and generate human language
+
+Display Output:
+    - Flask passes the generated text back to the frontend
+    - Users see AI-powered suggestions on their “Inspiration Board”

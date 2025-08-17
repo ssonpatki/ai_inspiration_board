@@ -1,3 +1,5 @@
+Current Project Structure
+
 -> Layout of project <-
 
 ai_inspiration_board/
@@ -12,6 +14,6 @@ ai_inspiration_board/
 
 -> Folder & File Responsibilities <-
 
-app.py → Flask routes, handle /generate POST requests
+app.py → Flask backend, handle /generate POST requests
 
 static/styles/ → Custom styles (CSS or Tailwind) for UI/UX
